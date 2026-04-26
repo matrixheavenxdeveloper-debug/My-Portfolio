@@ -132,7 +132,7 @@ const ContactSection = () => {
     setSubmitting(true);
 
     try {
-      const emailjs = (await import("emailjs-com")).default;
+      const emailjs = await import("@emailjs/browser");
 
       await emailjs.send(
         EMAILJS_SERVICE_ID,
